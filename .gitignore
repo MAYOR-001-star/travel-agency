@@ -1,7 +1,40 @@
+# OS files
 .DS_Store
-.env
-/node_modules/
+Thumbs.db
 
-# React Router
-/.react-router/
-/build/
+# Environment files
+.env
+.env.local
+.env.*.local
+
+# Node
+node_modules/
+.pnpm/
+
+# Build output
+dist/
+build/
+
+# React Router build cache
+.react-router/
+
+# Logs
+npm-debug.log*
+pnpm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+*.log
+
+# Local editor settings
+.vscode/
+.idea/
+
+# Temporary files
+*.tmp
+*.swp
+*.swo
+
+# Lock files (optional — keep if you prefer)
+# pnpm-lock.yaml
+# package-lock.json
+# yarn.lock
