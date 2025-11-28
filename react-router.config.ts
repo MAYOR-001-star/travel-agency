@@ -1,30 +1,38 @@
 import type {Config} from "@react-router/dev/config";
-
-
 export default {
-    // Enable server-side rendering (default)
-    ssr: true,
-
-    // Prevent React Router from treating assets + config files as routes
-    // @ts-ignore
+    ssr: true, // You want SSR
+// @ts-ignore
     ignoredRouteFiles: [
-        "**/*.css",
+        // Ignore everything in public
+        "public/**",
+
+        // Ignore assets
         "**/*.svg",
         "**/*.png",
         "**/*.jpg",
         "**/*.jpeg",
         "**/*.gif",
         "**/*.ico",
-        "**/*.d.ts",
+
+        // Ignore css
+        "**/*.css",
+
+        // Ignore markdown + docs
         "**/*.md",
+        "**/*.mdx",
+
+        // Ignore type files
+        "**/*.d.ts",
+
+        // Ignore test files
         "**/*.test.{ts,tsx,js,jsx}",
 
-        // Ignore the public folder completely
-        "public/**",
-
-        // Ignore Vite, TS, and config files
+        // Ignore config files so they don’t become routes
         "vite.config.*",
         "tsconfig.*",
         "react-router.config.*",
+
+        // Ignore EVERYTHING at project root
+        "/*",
     ],
 } satisfies Config;
